@@ -51,7 +51,7 @@ with col3:
         minus3= st.button("-3")
 with col4:
     if st.session_state.rule == '1,2,3,4':
-    minus4= st.button("-4")
+        minus4= st.button("-4")
 
 
 if minus1:
