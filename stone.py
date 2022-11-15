@@ -13,6 +13,7 @@ color = st.color_picker("What color do we want?",'#00f900')
 n = 15
 
 def ndown1():
+    global n
     n = n-1
 
 minus1= st.button("-1", on_click=ndown1)
