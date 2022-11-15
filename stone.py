@@ -13,4 +13,4 @@ color = st.color_picker("What color do we want?",'#00f900')
 n = 15
 
 st.write("The number is "+str(n))
-st.latex('''x = \frac{-b\pm\sqrt{b^2-4ac}{2a}}''')
+st.latex(r'''x = \frac{-b\pm\sqrt{b^2-4ac}{2a}}''')
