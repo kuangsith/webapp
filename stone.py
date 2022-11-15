@@ -3,22 +3,29 @@ import pandas as pd
 
 st.write("""
 # My first app
-Hello *world!*, and this is Kuang, by the way.
+The stone game!
 """)
 
 #df = pdf.read_csv("dat.csv")
 #st.bar_chart(df)
+
+st.write("What is the rule?")
+
 color = st.color_picker("What color do we want?",'#00f900')
 
 if 'count' not in st.session_state:
     st.session_state.count = 15
 
 
-
-minus1= st.button("-1")
-minus2= st.button("-2")
-minus3= st.button("-3")
-minus4= st.button("-4")
+st.columns(4)
+with col1:
+    minus1= st.button("-1")
+with col2:
+    minus2= st.button("-2")
+with col3:
+    minus3= st.button("-3")
+with col4:
+    minus4= st.button("-4")
 
 
 if minus1:
