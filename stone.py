@@ -10,13 +10,15 @@ Hello *world!*, and this is Kuang, by the way.
 #st.bar_chart(df)
 color = st.color_picker("What color do we want?",'#00f900')
 
-n = 15
+if 'count' not in st.session_state:
+    st.session_state.count = 15
 
-def ndown1():
-    global n
-    n = n-1
 
-minus1= st.button("-1", on_click=ndown1)
+
+minus1= st.button("-1")
+
+if minus1:
+    st.session_state.count = st.session_state.count-1
 
 st.write("The number is ")
 st.title(str(n))
