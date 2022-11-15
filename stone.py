@@ -16,9 +16,22 @@ if 'count' not in st.session_state:
 
 
 minus1= st.button("-1")
+minus2= st.button("-2")
+minus3= st.button("-3")
+minus4= st.button("-4")
+
 
 if minus1:
     st.session_state.count = st.session_state.count-1
+
+if minus2:
+    st.session_state.count = st.session_state.count-2
+
+if minus3:
+    st.session_state.count = st.session_state.count-3
+
+if minus4:
+    st.session_state.count = st.session_state.count-4
 
 st.write("The number is ")
 st.title(str(st.session_state.count))
