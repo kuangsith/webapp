@@ -17,7 +17,7 @@ if 'count' not in st.session_state:
     st.session_state.count = 15
 
 
-st.columns(4)
+col1,col2,col3,col4 = st.columns(4)
 with col1:
     minus1= st.button("-1")
 with col2:
