@@ -9,6 +9,9 @@ st.write("""
 #df = pdf.read_csv("dat.csv")
 #st.bar_chart(df)
 
+if 'rule' not in st.session_state:
+    st.session_state.rule = '1,2'
+
 st.write("What is the rule?")
 xol1,xol2,xol3 = st.columns(3)
 with xol1:
@@ -18,11 +21,24 @@ with xol2:
 with xol3:
     but1234 = st.button("1,2,3,4")
 
+if but12:
+    st.session_state.rule = '1,2'
+if but123:
+    st.session_state.rule = '1,2,3'
+if but1234:
+    st.session_state.rule = '1,2,3,4'
+
+st.write("")
+
 #color = st.color_picker("What color do we want?",'#00f900')
 
 if 'count' not in st.session_state:
     st.session_state.count = 15
 
+minus1=False
+minus2=False
+minus3=False
+minus4=False
 
 st.header("How many are you taking?")
 col1,col2,col3,col4 = st.columns(4)
