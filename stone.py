@@ -3,14 +3,20 @@ import pandas as pd
 from PIL import Image
 
 st.write("""
-# My first app
-The stone game!
+# My first app: The stone game!
 """)
 
 #df = pdf.read_csv("dat.csv")
 #st.bar_chart(df)
 
 st.write("What is the rule?")
+xol1,xol2,xol3 = st.columns(3)
+with xol1:
+    but12 = st.button("1,2")
+with xol2:
+    but123 = st.button("1,2,3")
+with xol3:
+    but1234 = st.button("1,2,3,4")
 
 #color = st.color_picker("What color do we want?",'#00f900')
 
