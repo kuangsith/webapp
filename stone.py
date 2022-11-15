@@ -12,6 +12,9 @@ color = st.color_picker("What color do we want?",'#00f900')
 
 n = 15
 
+minus1= st.button("-1")
+if minus1:
+    n = n-1
 st.write("The number is ")
 st.title(str(n))
 st.latex(r'''x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}''')
