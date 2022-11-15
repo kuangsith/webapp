@@ -12,7 +12,7 @@ The stone game!
 
 st.write("What is the rule?")
 
-color = st.color_picker("What color do we want?",'#00f900')
+#color = st.color_picker("What color do we want?",'#00f900')
 
 if 'count' not in st.session_state:
     st.session_state.count = 15
@@ -44,7 +44,9 @@ if minus4:
 st.write("The number is ")
 st.title(str(st.session_state.count))
 img = Image.open("peb.png")
-st.image(img,width=60)
+for i in range(st.session_state.count):
+    st.image(img,width=60)
+
 #st.latex(r'''x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}''')
 
 #st.latex(r'''
