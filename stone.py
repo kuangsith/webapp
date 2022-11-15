@@ -15,7 +15,7 @@ n = 15
 def ndown1():
     n = n-1
 
-minus1= st.button("-1", callable=ndown1)
+minus1= st.button("-1", on_click=ndown1)
 
 st.write("The number is ")
 st.title(str(n))
