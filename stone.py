@@ -47,10 +47,10 @@ with col1:
 with col2:
     minus2= st.button("-2")
 with col3:
-    if st.session_state.rule == '1,2,3' or st.session_state.rule = '1,2,3,4':
+    if st.session_state.rule == '1,2,3' or st.session_state.rule == '1,2,3,4':
         minus3= st.button("-3")
 with col4:
-    if st.session_state.rule = '1,2,3,4':
+    if st.session_state.rule == '1,2,3,4':
     minus4= st.button("-4")
 
 
