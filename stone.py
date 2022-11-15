@@ -28,7 +28,7 @@ if but123:
 if but1234:
     st.session_state.rule = '1,2,3,4'
 
-st.write("")
+st.write("The current rule is you may take "+st.session_state.rule+" stones" )
 
 #color = st.color_picker("What color do we want?",'#00f900')
 
