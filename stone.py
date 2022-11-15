@@ -43,14 +43,16 @@ minus4=False
 st.header("How many are you taking?")
 col1,col2,col3,col4 = st.columns(4)
 with col1:
-    minus1= st.button("-1")
+    if st.session_state.count >=1:
+        minus1= st.button("-1")
 with col2:
-    minus2= st.button("-2")
+    if st.session_state.count >=2:
+        minus2= st.button("-2")
 with col3:
-    if st.session_state.rule == '1,2,3' or st.session_state.rule == '1,2,3,4':
+    if st.session_state.count >=3 and (st.session_state.rule == '1,2,3' or st.session_state.rule == '1,2,3,4'):
         minus3= st.button("-3")
 with col4:
-    if st.session_state.rule == '1,2,3,4':
+    if st.session_state.count >=4 and st.session_state.rule == '1,2,3,4':
         minus4= st.button("-4")
 
 
