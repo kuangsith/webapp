@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image
 
 st.write("""
 # My first app
@@ -42,6 +43,8 @@ if minus4:
 
 st.write("The number is ")
 st.title(str(st.session_state.count))
+img = Image.open("peb.png")
+st.image(img,width=20)
 #st.latex(r'''x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}''')
 
 #st.latex(r'''
