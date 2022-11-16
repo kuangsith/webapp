@@ -62,6 +62,23 @@ with col4:
 st.write("The number is ")
 st.title(str(st.session_state.count))
 img = Image.open("peb.png")
+
+#printing stones
+s1,s2,s3,s4,s5,e1,s6,s7,s8,s9,s10 = st.columns(11)
+
+n1 = (st.session_state.count+9)//10
+n2 = (st.session_state.count+8)//10
+n3 = (st.session_state.count+7)//10
+n4 = (st.session_state.count+6)//10
+n5 = (st.session_state.count+5)//10
+n6 = (st.session_state.count+4)//10
+n7 = (st.session_state.count+3)//10
+n8 = (st.session_state.count+2)//10
+n9 = (st.session_state.count+1)//10
+n10 = (st.session_state.count)//10
+
+st.write(str(n1)+str(n2)+str(n3)+str(n4)+str(n5)+str(n6)+str(n7)+str(n8)+str(n9)+str(n10))
+
 for i in range(st.session_state.count):
     st.image(img,width=60)
 
