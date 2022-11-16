@@ -39,7 +39,7 @@ with st.expander("Setting"):
 
 
 
-    st.write("Reset the game to "+st.session_state.rule+" stones, and the rule being able to take "+ruletemp+" stones.")
+    st.write("Reset the game to "+str(num)+" stones, and the rule being able to take "+ruletemp+" stones.")
     resetbut = st.button("reset")
     if resetbut:
         st.session_state.count = num
