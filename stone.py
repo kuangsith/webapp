@@ -77,10 +77,20 @@ n8 = (st.session_state.count+2)//10
 n9 = (st.session_state.count+1)//10
 n10 = (st.session_state.count)//10
 
-st.write(str(n1)+str(n2)+str(n3)+str(n4)+str(n5)+str(n6)+str(n7)+str(n8)+str(n9)+str(n10))
+#st.write(str(n1)+str(n2)+str(n3)+str(n4)+str(n5)+str(n6)+str(n7)+str(n8)+str(n9)+str(n10))
 
-for i in range(st.session_state.count):
-    st.image(img,width=60)
+#do it column by column
+
+with s1:
+    for i in range(n1):
+        st.image(img,width=60)
+
+with s2:
+    for i in range(n2):
+        st.image(img,width=60)
+
+#for i in range(st.session_state.count):
+#    st.image(img,width=60)
 
 
 if minus1:
