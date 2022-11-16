@@ -42,7 +42,7 @@ with st.expander("Setting"):
     st.write("Reset the game to "+str(num)+" stones, and the rule being able to take "+ruletemp+" stones.")
     resetbut = st.button("reset")
     if resetbut:
-        #st.session_state.count = num
+        st.session_state.count = num
         st.session_state.rule = ruletemp
 
 #color = st.color_picker("What color do we want?",'#00f900')
