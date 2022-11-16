@@ -59,8 +59,6 @@ minus4=False
 st.header("Gameplay")
 st.write("The current rule is you may take "+st.session_state.rule+" stones.")
 st.write("How many stones are you taking?")
-st.button("Update")
-st.write(st.session_state.count)
 col1,col2,col3,col4 = st.columns(4)
 with col1:
     if st.session_state.count >=1:
@@ -152,7 +150,7 @@ with s10:
     for i in range(n10):
         st.image(img,width=60)
 
-
+st.experimental_rerun()
 
 #for i in range(st.session_state.count):
 #    st.image(img,width=60)
