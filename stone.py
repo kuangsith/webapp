@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
+rerunrequest = False
 st.write("""
 # Don't be the last: the stone picking game!
 """)
@@ -75,15 +76,19 @@ with col4:
 
 if minus1:
     st.session_state.count = st.session_state.count-1
+    rerunrequest = True
 
 if minus2:
     st.session_state.count = st.session_state.count-2
+    rerunrequest = True
 
 if minus3:
     st.session_state.count = st.session_state.count-3
+    rerunrequest = True
 
 if minus4:
     st.session_state.count = st.session_state.count-4
+    rerunrequest = True
 
 
 st.write("The number is ")
@@ -150,6 +155,8 @@ with s10:
     for i in range(n10):
         st.image(img,width=60)
 
+if rerunrequest:
+    st.experimental_rerun()
 
 #for i in range(st.session_state.count):
 #    st.image(img,width=60)
