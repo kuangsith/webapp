@@ -150,7 +150,6 @@ with s10:
     for i in range(n10):
         st.image(img,width=60)
 
-st.experimental_rerun()
 
 #for i in range(st.session_state.count):
 #    st.image(img,width=60)
