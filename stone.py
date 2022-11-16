@@ -56,6 +56,18 @@ minus2=False
 minus3=False
 minus4=False
 
+if minus1:
+    st.session_state.count = st.session_state.count-1
+
+if minus2:
+    st.session_state.count = st.session_state.count-2
+
+if minus3:
+    st.session_state.count = st.session_state.count-3
+
+if minus4:
+    st.session_state.count = st.session_state.count-4
+
 st.header("Gameplay")
 st.write("The current rule is you may take "+st.session_state.rule+" stones.")
 st.write("How many stones are you taking?")
@@ -140,17 +152,7 @@ with s10:
     for i in range(n10):
         st.image(img,width=60)
 
-if minus1:
-    st.session_state.count = st.session_state.count-1
 
-if minus2:
-    st.session_state.count = st.session_state.count-2
-
-if minus3:
-    st.session_state.count = st.session_state.count-3
-
-if minus4:
-    st.session_state.count = st.session_state.count-4
 
 #for i in range(st.session_state.count):
 #    st.image(img,width=60)
