@@ -80,6 +80,8 @@ n10 = (st.session_state.count)//10
 #st.write(str(n1)+str(n2)+str(n3)+str(n4)+str(n5)+str(n6)+str(n7)+str(n8)+str(n9)+str(n10))
 
 #do it column by column
+with e1:
+    st.write(" ")
 
 with s1:
     for i in range(n1):
@@ -87,6 +89,38 @@ with s1:
 
 with s2:
     for i in range(n2):
+        st.image(img,width=60)
+
+with s3:
+    for i in range(n3):
+        st.image(img,width=60)
+
+with s4:
+    for i in range(n4):
+        st.image(img,width=60)
+
+with s5:
+    for i in range(n5):
+        st.image(img,width=60)
+
+with s6:
+    for i in range(n6):
+        st.image(img,width=60)
+
+with s7:
+    for i in range(n7):
+        st.image(img,width=60)
+
+with s8:
+    for i in range(n8):
+        st.image(img,width=60)
+
+with s9:
+    for i in range(n9):
+        st.image(img,width=60)
+
+with s10:
+    for i in range(n10):
         st.image(img,width=60)
 
 #for i in range(st.session_state.count):
