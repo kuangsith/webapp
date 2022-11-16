@@ -73,6 +73,18 @@ with col4:
     if st.session_state.count >=4 and st.session_state.rule == '1,2,3,4':
         minus4= st.button("-4")
 
+if minus1:
+    st.session_state.count = st.session_state.count-1
+
+if minus2:
+    st.session_state.count = st.session_state.count-2
+
+if minus3:
+    st.session_state.count = st.session_state.count-3
+
+if minus4:
+    st.session_state.count = st.session_state.count-4
+
 
 st.write("The number is ")
 st.title(str(st.session_state.count))
@@ -142,17 +154,7 @@ with s10:
 #    st.image(img,width=60)
 
 
-if minus1:
-    st.session_state.count = st.session_state.count-1
 
-if minus2:
-    st.session_state.count = st.session_state.count-2
-
-if minus3:
-    st.session_state.count = st.session_state.count-3
-
-if minus4:
-    st.session_state.count = st.session_state.count-4
 
 
 
