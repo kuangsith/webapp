@@ -16,7 +16,7 @@ with st.expander("Setting"):
         st.session_state.rule = '1,2,3'
 
     num = st.slider("Number of stones: ",min_value=10,max_value=50)
-    resetbut = st.button("reset")
+    
 
 
 
@@ -29,6 +29,7 @@ with st.expander("Setting"):
     with xol3:
         but1234 = st.button("1,2,3,4")
 
+    ruletemp = st.session_state.rule
     if but12:
         ruletemp = '1,2'
     if but123:
@@ -36,6 +37,7 @@ with st.expander("Setting"):
     if but1234:
         ruletemp = '1,2,3,4'
 
+    resetbut = st.button("reset")
     if resetbut:
         st.session_state.count = num
         st.session_state.rule = ruletemp
