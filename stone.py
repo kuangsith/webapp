@@ -31,19 +31,19 @@ with st.expander("Setting"):
 
     ruletemp = st.session_state.rule
     if but12:
-        ruletemp = '1,2'
+        st.session_state.rule ='1,2'
     if but123:
-        ruletemp = '1,2,3'
+        st.session_state.rule ='1,2,3'
     if but1234:
-        ruletemp = '1,2,3,4'
+        st.session_state.rule ='1,2,3,4'
 
 
 
-    st.write("Reset the game to "+str(num)+" stones, and the rule being able to take "+ruletemp+" stones.")
-    resetbut = st.button("reset")
+    st.write("Reset the game to "+str(num)+" stones.")
+    resetbut = st.button("Reset")
     if resetbut:
         st.session_state.count = num
-        st.session_state.rule = ruletemp
+        #st.session_state.rule = ruletemp
 
 #color = st.color_picker("What color do we want?",'#00f900')
 
