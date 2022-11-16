@@ -32,8 +32,12 @@ st.write("The current rule is you may take "+st.session_state.rule+" stones")
 
 #color = st.color_picker("What color do we want?",'#00f900')
 
+
+
 if 'count' not in st.session_state:
     st.session_state.count = 15
+
+
 
 minus1=False
 minus2=False
@@ -55,6 +59,12 @@ with col4:
     if st.session_state.count >=4 and st.session_state.rule == '1,2,3,4':
         minus4= st.button("-4")
 
+st.write("The number is ")
+st.title(str(st.session_state.count))
+img = Image.open("peb.png")
+for i in range(st.session_state.count):
+    st.image(img,width=60)
+
 
 if minus1:
     st.session_state.count = st.session_state.count-1
@@ -68,11 +78,7 @@ if minus3:
 if minus4:
     st.session_state.count = st.session_state.count-4
 
-st.write("The number is ")
-st.title(str(st.session_state.count))
-img = Image.open("peb.png")
-for i in range(st.session_state.count):
-    st.image(img,width=60)
+
 
 #st.latex(r'''x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}''')
 
