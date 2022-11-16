@@ -10,7 +10,13 @@ st.write("""
 #st.bar_chart(df)
 
 if 'rule' not in st.session_state:
-    st.session_state.rule = '1,2'
+    st.session_state.rule = '1,2,3'
+
+num = st.slider("Number of stones: ")
+resetbut = st.button("reset")
+
+if resetbut:
+    st.session_state.count = num
 
 st.write("What is the rule?")
 xol1,xol2,xol3 = st.columns(3)
@@ -28,7 +34,7 @@ if but123:
 if but1234:
     st.session_state.rule = '1,2,3,4'
 
-st.write("The current rule is you may take "+st.session_state.rule+" stones")
+st.write("The current rule is you may take "+st.session_state.rule+" stones.")
 
 #color = st.color_picker("What color do we want?",'#00f900')
 
