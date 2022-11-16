@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image
 
 st.write("""
-# My first app: The stone game!
+# Don't be the last: the stone picking game!
 """)
 
 #df = pdf.read_csv("dat.csv")
@@ -18,8 +18,7 @@ with st.expander("Setting"):
     num = st.slider("Number of stones: ",min_value=10,max_value=50)
     resetbut = st.button("reset")
 
-    if resetbut:
-        st.session_state.count = num
+
 
     st.write("How many stones can a player take in a turn?")
     xol1,xol2,xol3 = st.columns(3)
@@ -31,11 +30,15 @@ with st.expander("Setting"):
         but1234 = st.button("1,2,3,4")
 
     if but12:
-        st.session_state.rule = '1,2'
+        ruletemp = '1,2'
     if but123:
-        st.session_state.rule = '1,2,3'
+        ruletemp = '1,2,3'
     if but1234:
-        st.session_state.rule = '1,2,3,4'
+        ruletemp = '1,2,3,4'
+
+    if resetbut:
+        st.session_state.count = num
+        st.session_state.rule = ruletemp
 
     st.write("The current rule is you may take "+st.session_state.rule+" stones.")
 
@@ -67,6 +70,7 @@ with col3:
 with col4:
     if st.session_state.count >=4 and st.session_state.rule == '1,2,3,4':
         minus4= st.button("-4")
+
 
 st.write("The number is ")
 st.title(str(st.session_state.count))
