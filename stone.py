@@ -9,16 +9,16 @@ st.write("""
 #df = pdf.read_csv("dat.csv")
 #st.bar_chart(df)
 
-st.header("Game setting")
+if 'count' not in st.session_state:
+    st.session_state.count = 15
+if 'rule' not in st.session_state:
+    st.session_state.rule = '1,2,3'
+
 with st.expander("Setting"):
 
-    if 'rule' not in st.session_state:
-        st.session_state.rule = '1,2,3'
 
     num = st.slider("Number of stones: ",min_value=10,max_value=50)
     
-
-
 
     st.write("How many stones can a player take in a turn?")
     xol1,xol2,xol3 = st.columns(3)
@@ -37,20 +37,18 @@ with st.expander("Setting"):
     if but1234:
         ruletemp = '1,2,3,4'
 
-    resetbut = st.button("reset")
+
+
+    st.write("Reset the game to "+st.session_state.rule+" stones, and the rule being able to take "+ruletemp+" stones.")
+        resetbut = st.button("reset")
     if resetbut:
         st.session_state.count = num
         st.session_state.rule = ruletemp
 
-    st.write("The current rule is you may take "+st.session_state.rule+" stones.")
-
 #color = st.color_picker("What color do we want?",'#00f900')
 
 
-
-if 'count' not in st.session_state:
-    st.session_state.count = 15
-
+st.write("The current rule is you may take "+st.session_state.rule+" stones.")
 
 
 minus1=False
@@ -58,7 +56,8 @@ minus2=False
 minus3=False
 minus4=False
 
-st.header("How many are you taking?")
+st.header("Gameplay")
+st.write("How many stones are you taking?")
 col1,col2,col3,col4 = st.columns(4)
 with col1:
     if st.session_state.count >=1:
