@@ -11,9 +11,10 @@ st.write("""
 #st.bar_chart(df)
 
 if 'count' not in st.session_state:
-    st.session_state.count = 15
+    st.session_state.count = 20
 if 'rule' not in st.session_state:
     st.session_state.rule = '1,2,3'
+    st.session_state.temp = '1,2,3'
 
 with st.expander("Setting"):
 
@@ -30,21 +31,21 @@ with st.expander("Setting"):
     with xol3:
         but1234 = st.button("1,2,3,4")
 
-    ruletemp = st.session_state.rule
+    
     if but12:
-        st.session_state.rule ='1,2'
+        st.session_state.temp = '1,2'
     if but123:
-        st.session_state.rule ='1,2,3'
+        st.session_state.temp = '1,2,3'
     if but1234:
-        st.session_state.rule ='1,2,3,4'
+        st.session_state.temp = '1,2,3,4'
 
 
 
-    st.write("Reset the game to "+str(num)+" stones.")
+    st.write("Reset the game to "+str(num)+" stones, and the rule to able to take " +st.session_state.temp + " stones.")
     resetbut = st.button("Reset")
     if resetbut:
         st.session_state.count = num
-        #st.session_state.rule = ruletemp
+        st.session_state.rule = st.session_state.temp
 
 #color = st.color_picker("What color do we want?",'#00f900')
 
