@@ -14,6 +14,7 @@ if 'count' not in st.session_state:
     st.session_state.count = 20
 if 'rule' not in st.session_state:
     st.session_state.rule = '1,2,3'
+if 'temp' not in st.session_state:
     st.session_state.temp = '1,2,3'
 
 with st.expander("Setting"):
