@@ -157,6 +157,9 @@ with s10:
     for i in range(n10):
         st.image(img,width=60)
 
+if st.session_state.count == 0:
+    st.write("The game is over. Please reset to game to restart. Thank you for playing.")
+
 if rerunrequest:
     st.experimental_rerun()
 
